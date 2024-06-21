@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center align-items-center form-container">
+    <div class="form p-2">
+        <div class="form-input-container p-2 d-flex flex-column">
+            <h3>Sign Up</h3>
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">First Name</label>
+            <input class="p-2" type="text" placeholder="First Name" [ngModel]="userData.FirstName" />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Last Name</label>
+            <input class="p-2" type="text" placeholder="Last Name" [ngModel]="userData.LastName" />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Phone</label>
+            <input class="p-2" type="text" placeholder="Phone" [ngModel]="userData.Phone" />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Email</label>
+            <input class="p-2" type="text" placeholder="Email" [ngModel]="userData.Email" />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Password</label>
+            <input class="p-2" type="password" placeholder="Password" [ngModel]="userData.Password" />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <button class="btn btn-primary p-2">Sign Up</button>
+        </div>
+    </div>
+</div>

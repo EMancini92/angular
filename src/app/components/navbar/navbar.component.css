@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+    color: #111;
+    display: block;
+    padding: 15px;
+}
+
+a:hover{
+    color: #FFF;
+}
+
+
+.nav{
+    background: linear-gradient(to bottom, #D01296, #Ab00fe);
+}
