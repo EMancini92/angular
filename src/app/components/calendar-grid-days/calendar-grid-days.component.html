@@ -1,1 +1,12 @@
-<p>calendar-grid-days works!</p>
+
+<app-calendar-header (messageEvent)="receiveMessage($event)"></app-calendar-header>
+<div class="weekdaysContainer p-4">
+    <div class="day-name p-2" *ngFor="let curName of nameDays">
+        {{curName}}
+    </div>
+</div>
+<div class="daysContainer p-4">
+    <div class="day-box p-2" *ngFor="let curDay of days">
+        <p *ngIf="curDay.Number != 0">{{curDay.Number}}</p>
+    </div>
+</div>

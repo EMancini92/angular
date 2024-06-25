@@ -1,0 +1,26 @@
+.weekdaysContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.day-name{
+    display: flex;
+    width: calc(100% / 7);
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+}
+
+.daysContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.day-box{
+    display: flex;
+    width: calc(100% / 7);
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+}
