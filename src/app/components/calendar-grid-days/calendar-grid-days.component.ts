@@ -3,11 +3,12 @@ import { CalendarService } from '../../services/calendar.service';
 import { NgFor, NgIf } from '@angular/common';
 import { Day } from '../../models/Day.model';
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
+import { FormReservationComponent } from '../form-reservation/form-reservation.component';
 
 @Component({
   selector: 'app-calendar-grid-days',
   standalone: true,
-  imports: [NgFor, NgIf, CalendarHeaderComponent],
+  imports: [NgFor, NgIf, CalendarHeaderComponent, FormReservationComponent],
   templateUrl: './calendar-grid-days.component.html',
   styleUrl: './calendar-grid-days.component.css'
 })
@@ -18,7 +19,9 @@ export class CalendarGridDaysComponent {
   days:Day[] = [];
   nameDays:string[] = this.calendarService.nameDays;
   curMonth:number = 0;
-  curYear:number = this.calendarService.getCurrentYear()
+  curYear:number = this.calendarService.getCurrentYear();
+  showForm:boolean = false;
+  date:string = '';
 
 
   ngOnInit(){
@@ -49,9 +52,15 @@ export class CalendarGridDaysComponent {
   }
 
   receiveMessage($event: number){
-    console.log('$event; : ', $event);
     this.curMonth = $event;
     this.buildGrid(this.curMonth, this.curYear);
+  }
+
+  handleShowForm(day: number){
+    let month = this.curMonth < 10 ? '0'+(this.curMonth+1).toString() : (this.curMonth+1).toString();
+    let curDay = day < 10 ? '0'+day.toString() : day;
+    this.date = this.curYear.toString()+'-'+month+'-'+curDay;
+    this.showForm = true;
   }
 
 

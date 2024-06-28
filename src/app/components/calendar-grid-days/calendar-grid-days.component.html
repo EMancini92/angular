@@ -7,6 +7,8 @@
 </div>
 <div class="daysContainer p-4">
     <div class="day-box p-2" *ngFor="let curDay of days">
-        <p *ngIf="curDay.Number != 0">{{curDay.Number}}</p>
+        <p *ngIf="curDay.Number != 0" (click)="handleShowForm(curDay.Number) ">{{curDay.Number}}</p>
     </div>
 </div>
+
+<app-form-reservation *ngIf="showForm" [date]="date"></app-form-reservation>

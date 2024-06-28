@@ -1,0 +1,19 @@
+.form{
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 7.5px;
+    background: #FFF;
+}
+
+.form-container{
+    min-height: calc(100vh - 110px);
+}
+
+.bg-area{
+    position: absolute;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}

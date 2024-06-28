@@ -1,0 +1,27 @@
+<div class="bg-area d-flex justify-content-center align-items-center form-container">
+    <div class="form p-2">
+        <div class="form-input-container p-2 d-flex flex-column">
+            <h3>Reservation</h3>
+        </div>
+        
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Date</label>
+            <input class="p-2" type="date" [(ngModel)]="reservation.Date" readonly disabled  />
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Hour</label>
+            <select>
+                <option *ngFor="let hour of hours">{{hour}}</option>
+            </select>
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <label class="pb-2">Service</label>
+            <select>
+                <option *ngFor="let service of services">{{service}}</option>
+            </select>
+        </div>
+        <div class="form-input-container p-2 d-flex flex-column">
+            <button class="btn btn-primary p-2">Reserve</button>
+        </div>
+    </div>
+</div>

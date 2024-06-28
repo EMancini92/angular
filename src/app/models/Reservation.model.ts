@@ -1,5 +1,5 @@
 export class Reservation{
-    Date:Date = new Date();
+    Date:string = '';
     Time:string = '';
     Service:string = '';
 }
